@@ -4,8 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "node index.js",
-    "start-watch": "nodemon index.js",
+    "start": "node server.js",
+    "start-watch": "nodemon server.js",
     "dev": "concurrently \"yarn run start-watch\" \"cd client && yarn start\"",
     "client": "cd client && npm run start",
     "seed": "node scripts/seedDB.js",
