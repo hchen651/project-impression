@@ -23,6 +23,12 @@ app.use((req, res, next) => {
   next();
 });
 
+if (process.env.NODE_ENV === "production") {
+  console.log("in production");
+  app.use(express.static(path.join(__dirname, "client/build")));
+}
+app.use(express.static(path.join(__dirname, "client/public")));
+
 app.use(bodyParser.json());
 
 app.use('/api', routes);
